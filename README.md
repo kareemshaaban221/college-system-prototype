@@ -2,6 +2,7 @@
 php final project -- instant full-stack course
 =============================================
 ## the system consists of two parts :
+---------------------------------------------
 -user panel => user universe:
     -user sign up
     -user login
