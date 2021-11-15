@@ -1,0 +1,11 @@
+.home{
+    padding-top: 100px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.firstChar{
+    box-shadow: black 0px 0px 50px;
+}
