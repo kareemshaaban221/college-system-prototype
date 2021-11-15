@@ -1,5 +1,5 @@
 # Impotant Note:
-    this repo must be cloned in dirctory called "C:\xampp\htdocs\Project\" to Work well
+    this repo # MUST be cloned in dirctory called "C:\xampp\htdocs\Project\" to operate well
 # college-system-prototype
 php final project -- instant full-stack course
 =============================================
