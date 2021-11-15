@@ -7,7 +7,7 @@ user panel => user universe:
     -user login
     -user level of authorization to system pages
 ----------------------------------------------
-admin panel(admin) => admin universe:
+##admin panel(admin) => admin universe:
     -admin and system actual users (instructors, students...) login
     -admin level of authorization to add and remove other admins
     -List other admins data
