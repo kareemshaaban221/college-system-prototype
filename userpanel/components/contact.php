@@ -1,18 +1,31 @@
+<div class="mt-3">lol</div>
+
 <?php 
 
     if(isset($_POST['name'])){
+
         $db = new DBManager("college_system");
         $query = "SELECT id FROM users WHERE email='{$_POST['email']}';";
-        $data = $db->select($query)[0][0];
 
-        $query = "INSERT INTO user_message(`username`, `user_id`, `text`) VALUES('{$_POST['name']}', {intval($data)}, '{$_POST['msg']}');";
-        $db->insert($query);
+        if($_POST['name'] && $_POST['email'] && $_POST['msg']){
+            $data = $db->select($query)[0][0];-
+            $query = "INSERT INTO user_message(`username`, `user_id`, `text`) VALUES('{$_POST['name']}', {intval($data)}, '{$_POST['msg']}');";
+            if($db->insert($query)){
+                echo "<div class='alert alert-success text-center mt-5'>Your message has been sent successfully.</div>";
+            }
+            else{
+                echo "<div class='alert alert-danger text-center mt-5'>Invalid send operation! Please try again later.</div>";
+            }
+        }
+        else{
+            echo "<div class='alert alert-danger text-center mt-5'>Invalid send operation! Please try again later.</div>";
+        }
+
     }
 
 ?>
 
 
-<div class="mt-3">lol</div>
 <form method="POST" class="container mt-5 p-5 border border-dark rounded mb-5">
     <div class="form-group">
         <label for="username" class="text-secondary">Username</label>
