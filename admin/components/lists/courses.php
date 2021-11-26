@@ -28,7 +28,7 @@
         
         <?php if($_SESSION['role'] == 'admins'): ?>
             <td class="wow fadeInRight"><a href="/Project/admin/operations/delete.php?login=true&entity=courses&id=<?php echo $id ?>" class="btn btn-danger pt-0 pb-0 pr-4 pl-4"><i class="fa fa-trash"></i></a></td>
-            <td class="wow fadeInRight"><a href="/Project/admin/operations/delete.php?login=true&entity=courses&id=<?php echo $id ?>" class="btn btn-primary pt-0 pb-0 pr-4 pl-4"><i class="fa fa-edit"></i></a></td>
+            <td class="wow fadeInRight"><a href="/Project/admin/edit.php?login=true&entity=courses&id=<?php echo $id ?>" class="btn btn-primary pt-0 pb-0 pr-4 pl-4"><i class="fa fa-edit"></i></a></td>
         <?php endif; ?>
     </tr>
     <?php } ?>

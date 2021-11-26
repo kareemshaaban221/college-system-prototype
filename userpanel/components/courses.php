@@ -3,7 +3,7 @@
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
-    <img src="/Project/imgs/prog1.jpg" alt="" class="float-left mr-2 h-75 w-25">
+    <img src="/Project/assets/imgs/prog1.jpg" alt="" class="float-left mr-2 h-75 w-25">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
@@ -17,7 +17,7 @@
 
 <div class="container wow fadeInUp mt-5 mb-5">
     <fieldset class="border border-info rounded p-4">
-        <legend class="d-inline m-2 w-25"><img src="/Project/imgs/doc1.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
+        <legend class="d-inline m-2 w-25"><img src="/Project/assets/imgs/doc1.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
         <h2>
             PhD. 
             <?php 
@@ -41,7 +41,7 @@
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
-    <img src="/Project/imgs/os.jpg" alt="" class="float-left mr-2 h-75 w-25">
+    <img src="/Project/assets/imgs/os.jpg" alt="" class="float-left mr-2 h-75 w-25">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
@@ -57,7 +57,7 @@
 
 <div class="container wow fadeInUp mt-5 mb-5">
     <fieldset class="border border-info rounded p-4">
-        <legend class="d-inline m-2 w-25"><img src="/Project/imgs/doc1.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
+        <legend class="d-inline m-2 w-25"><img src="/Project/assets/imgs/doc1.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
         <h2>
             PhD. 
             <?php 
@@ -82,7 +82,7 @@
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
-    <img src="/Project/imgs/oop.jpg" alt="" class="float-left mr-2 h-75 w-25">
+    <img src="/Project/assets/imgs/oop.jpg" alt="" class="float-left mr-2 h-75 w-25">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
@@ -98,7 +98,7 @@
 
 <div class="container wow fadeInUp mt-5 mb-5">
     <fieldset class="border border-info rounded p-4">
-        <legend class="d-inline m-2 w-25"><img src="/Project/imgs/doc2.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
+        <legend class="d-inline m-2 w-25"><img src="/Project/assets/imgs/doc2.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
         <h2>
             PhD. 
             <?php 
@@ -125,7 +125,7 @@
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
-    <img src="/Project/imgs/DSA.jpg" alt="" class="float-left mr-2 h-75 w-25">
+    <img src="/Project/assets/imgs/DSA.jpg" alt="" class="float-left mr-2 h-75 w-25">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
@@ -142,7 +142,7 @@
 
 <div class="container wow fadeInUp mt-5 mb-5">
     <fieldset class="border border-info rounded p-4">
-        <legend class="d-inline m-2 w-25"><img src="/Project/imgs/doc1.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
+        <legend class="d-inline m-2 w-25"><img src="/Project/assets/imgs/doc1.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
         <h2>
             PhD. 
             <?php 
@@ -169,7 +169,7 @@
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
-    <img src="/Project/imgs/calculus.jpg" alt="" class="float-left mr-2 h-75 w-25">
+    <img src="/Project/assets/imgs/calculus.jpg" alt="" class="float-left mr-2 h-75 w-25">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
@@ -186,7 +186,7 @@
 
 <div class="container wow fadeInUp mt-5 mb-5">
     <fieldset class="border border-info rounded p-4">
-        <legend class="d-inline m-2 w-25"><img src="/Project/imgs/doc2.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
+        <legend class="d-inline m-2 w-25"><img src="/Project/assets/imgs/doc2.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
         <h2>
             PhD. 
             <?php 
@@ -213,7 +213,7 @@
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
-    <img src="/Project/imgs/CG.jpg" alt="" class="float-left mr-2 h-75 w-25">
+    <img src="/Project/assets/imgs/CG.jpg" alt="" class="float-left mr-2 h-75 w-25">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus quam possimus dolorum nostrum hic vero repellat, delectus veniam at neque unde assumenda vitae, cum sunt, quo eaque? Omnis, explicabo!</p>
@@ -227,7 +227,7 @@
 
 <div class="container wow fadeInUp mt-5 mb-5">
     <fieldset class="border border-info rounded p-4">
-        <legend class="d-inline m-2 w-25"><img src="/Project/imgs/doc2.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
+        <legend class="d-inline m-2 w-25"><img src="/Project/assets/imgs/doc2.jpg" alt="" class="w-100 h-100 rounded-circle"></legend>
         <h2>
             PhD. 
             <?php 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2021 at 04:19 AM
+-- Generation Time: Nov 26, 2021 at 06:51 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -40,7 +40,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `role`) VALUES
-(1, 'kareem', 'admin@admin.com', '123', 3);
+(1, 'kareem', 'admin@admin.com', '456', 3);
 
 -- --------------------------------------------------------
 
@@ -55,19 +55,6 @@ CREATE TABLE `courses` (
   `price` float NOT NULL,
   `instructor_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `courses`
---
-
-INSERT INTO `courses` (`id`, `name`, `grade`, `price`, `instructor_id`) VALUES
-(1, 'Programming 1', '1', 70, 3),
-(2, 'Programming 2', '1', 100, 1),
-(3, 'Data Structures', '2', 100, 1),
-(4, 'Operating Systems', '3', 190, 1),
-(5, 'Computer Vision', '4', 149.99, 3),
-(6, 'Computer Graphics', '3', 100, 3),
-(7, 'Network', '2', 70, 3);
 
 -- --------------------------------------------------------
 
@@ -89,8 +76,7 @@ CREATE TABLE `instructors` (
 --
 
 INSERT INTO `instructors` (`id`, `name`, `email`, `password`, `gender`, `phone`) VALUES
-(1, 'Mohamed Ali', 'krkr.egj5@gmail.com', '123', 'male', '01063620757'),
-(3, 'Rana Zaki', 'rana@ins.com', '123', 'female', '01063620757');
+(4, 'Kimo Moh', 'krkr.egj5@gmail.com', '123', 'male', '01063620757');
 
 -- --------------------------------------------------------
 
@@ -122,14 +108,6 @@ CREATE TABLE `students` (
   `grade` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `students`
---
-
-INSERT INTO `students` (`id`, `name`, `email`, `password`, `gender`, `phone`, `grade`) VALUES
-(1, 'Kimo Moh', 'krkr.egj5@gmail.com', '123', 'male', '01063620757', '3'),
-(2, 'kareem', 'kareem@std.com', '123', 'male', '01063620757', '1');
-
 -- --------------------------------------------------------
 
 --
@@ -143,13 +121,6 @@ CREATE TABLE `users` (
   `password` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(1, 'Kimo Moh', 'krkr.egj5@gmail.com', '123');
-
 -- --------------------------------------------------------
 
 --
@@ -162,13 +133,6 @@ CREATE TABLE `user_message` (
   `user_id` int(11) NOT NULL,
   `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `user_message`
---
-
-INSERT INTO `user_message` (`id`, `username`, `user_id`, `text`) VALUES
-(8, 'Kimo Moh', 1, '123456');
 
 --
 -- Indexes for dumped tables
@@ -244,7 +208,7 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT for table `instructors`
 --
 ALTER TABLE `instructors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `instructor_family`
@@ -268,7 +232,29 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_message`
 --
 ALTER TABLE `user_message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `courses`
+--
+ALTER TABLE `courses`
+  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`instructor_id`) REFERENCES `instructors` (`id`);
+
+--
+-- Constraints for table `instructor_family`
+--
+ALTER TABLE `instructor_family`
+  ADD CONSTRAINT `instructor_family_ibfk_1` FOREIGN KEY (`instructor_id`) REFERENCES `instructors` (`id`);
+
+--
+-- Constraints for table `user_message`
+--
+ALTER TABLE `user_message`
+  ADD CONSTRAINT `user_message_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

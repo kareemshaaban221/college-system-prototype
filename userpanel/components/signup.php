@@ -8,7 +8,7 @@
             <input type="text" name="name" class="form-control bg-transparent" id="exampleInputName1" aria-describedby="nameHelp">
         </div>
         <div class="form-group mt-4">
-            <label for="exampleInputEmail1" class="font-weight-bold text-secondary">Email address</label>
+            <label for="exazmpleInputEmail1" class="font-weight-bold text-secondary">Email address</label>
             <input type="email" name="email" class="form-control bg-transparent" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="form-group mt-4">

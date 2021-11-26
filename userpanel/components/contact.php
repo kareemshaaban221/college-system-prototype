@@ -8,7 +8,7 @@
         $query = "SELECT id FROM users WHERE email='{$_POST['email']}';";
 
         if($_POST['name'] && $_POST['email'] && $_POST['msg']){
-            $data = $db->select($query)[0][0];-
+            $data = $db->select($query)[0][0];
             $query = "INSERT INTO user_message(`username`, `user_id`, `text`) VALUES('{$_POST['name']}', {intval($data)}, '{$_POST['msg']}');";
             if($db->insert($query)){
                 echo "<div class='alert alert-success text-center mt-5'>Your message has been sent successfully.</div>";

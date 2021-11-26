@@ -23,7 +23,7 @@
                 $data = validate($entity, $email, $pass);
                 if(!$data){
                     $entity = "students";
-                    $data = validate("students", $email, $pass);
+                    $data = validate($entity, $email, $pass);
 
                     if(!$data){
                         header("location:/Project/admin/signin.php?invalid=true");

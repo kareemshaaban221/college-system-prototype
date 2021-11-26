@@ -1,4 +1,4 @@
-<div class="container mt-5 pt-5 text-center" he>
+<div class="container mt-5 pt-5 text-center">
     <h1 class="mb-5 font-weight-bolder wow fadeInDown">About Us</h1>
     <p class="p-3 m-0 text-secondary wow fadeInLeft"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus est consectetur blanditiis saepe quaerat labore, totam numquam sit veritatis dolorum reprehenderit obcaecati iure? Exercitationem delectus cupiditate facilis numquam laborum?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus est consectetur blanditiis saepe quaerat labore, totam numquam sit veritatis dolorum reprehenderit obcaecati iure? Exercitationem delectus cupiditate facilis numquam laborum?

@@ -26,6 +26,7 @@
 
         private function doQuery(string $query, bool $fetch = false){
             $exe = mysqli_query($this->conn, $query);
+            
             if($fetch && $exe){
                 return mysqli_fetch_all($exe);
             }

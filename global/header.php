@@ -8,7 +8,7 @@
                 <a class="nav-link" href="/Project/aboutus.php" id="aboutus">About us</a>
             </li>
         </ul>
-        <a href="" class="btn btn-info mr-2">Admins</a>
+        <a href="/Project/admin" class="btn btn-info mr-2">Admins</a>
         <a href="/Project/userpanel" class="btn btn-primary">Users</a>
     </div>
 </nav>

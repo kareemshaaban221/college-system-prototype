@@ -1,7 +1,7 @@
 <form class="p-5 mx-auto text-dark" method="POST" action="/Project/admin/operations/opsignInOut.php?login=true">
     <fieldset class="border rounded p-3 wow fadeInUp">
         <legend class="w-auto p-3 wow fadeInLeft">
-            <h1 class="font-weight-bolder">Sign In</h1>
+            <h1 class="font-weight-bolder">Sign In - Admin</h1>
         </legend>
         <?php 
             if(isset($_GET['invalid'])){
