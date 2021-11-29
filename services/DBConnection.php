@@ -24,11 +24,16 @@
             return mysqli_connect($this->host, $this->userName, $this->password, $this->dbName);
         }
 
-        private function doQuery(string $query, bool $fetch = false){
+        private function doQuery(string $query, bool $fetch = false, bool $assoc = false){
             $exe = mysqli_query($this->conn, $query);
             
             if($fetch && $exe){
-                return mysqli_fetch_all($exe);
+                if($assoc){
+                    return mysqli_fetch_all($exe, MYSQLI_ASSOC);
+                }
+                else{
+                    return mysqli_fetch_all($exe);
+                }
             }
             return $exe;
         }
@@ -37,8 +42,8 @@
             return $this->doQuery($query);
         }
 
-        function select(string $query){
-            return $this->doQuery($query, true);
+        function select(string $query, bool $assoc = false){
+            return $this->doQuery($query, true, $assoc);
         }
 
         function delete(string $query){

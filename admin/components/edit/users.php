@@ -1,23 +1,24 @@
 <?php 
+    $query = "SELECT `name`, `email` FROM users WHERE id=$id;";
+    $data = $db->select($query, true)[0];
 
     if(isset($_POST['name'])){
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $pass = $_POST['pass'];
 
         $db = new DBManager("college_system");
-        $query = "INSERT INTO users(`name`, `email`, `password`) VALUES('$name', '$email', '$pass');";
+        $query = "UPDATE users SET name='$name', email='$email' WHERE id=$id;";
 
-        if($name != '' && $email != '' && $pass != ''){
-            if($db->insert($query)){
-                echo "<div class='alert alert-success'>User has been inserted successfully.</div>";
+        if($name != '' && $email != ''){
+            if($db->update($query)){
+                echo "<div class='alert alert-success'>User has been updated successfully.</div>";
             }
             else{
-                echo "<div class='alert alert-danger'>Insertion is invalid.</div>";
+                echo "<div class='alert alert-danger'>Updating is invalid.</div>";
             }
         }
         else{
-            echo "<div class='alert alert-danger'>Insertion is invalid.</div>";
+            echo "<div class='alert alert-danger'>Updating is invalid. There are null values!</div>";
         }
         
     }
@@ -25,22 +26,18 @@
 ?>
 
 
-<?php if($_SESSION['role'] == "admins" || $_SESSION['role'] == "instructors" || $_SESSION['role'] == "students"): ?>
+<?php if($_SESSION['role'] == "admins"): ?>
 
-<form method="POST" action="http://localhost/Project/admin/add.php?login=true&entity=users" class="wow fadeInUp">
+<form method="POST" action="http://localhost/Project/admin/edit.php?login=true&entity=users&id=<?php echo $id ?>" class="wow fadeInUp">
     <div class="form-group">
         <label for="exampleInputName">Name</label>
-        <input type="text" class="form-control bg-transparent" id="exampleInputName" aria-describedby="emailHelp" name="name">
+        <input type="text" class="form-control bg-transparent" id="exampleInputName" aria-describedby="emailHelp" name="name" value="<?php echo $data['name']?>">
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control bg-transparent" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+        <input type="email" class="form-control bg-transparent" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="<?php echo $data['email']?>">
     </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control bg-transparent" id="exampleInputPassword1" name="pass">
-    </div>
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="submit" class="btn btn-primary">Edit</button>
 </form>
 
 <?php else: ?>

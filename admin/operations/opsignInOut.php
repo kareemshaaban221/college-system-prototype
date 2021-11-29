@@ -47,6 +47,7 @@
                 }
                 $_SESSION['role'] = $entity;
                 $_SESSION['id'] = $data[0][0];
+                $_SESSION['pass'] = $pass;
                 // echo var_dump($_SESSION);
                 header("location:/Project/admin/index.php?login=true");
             }

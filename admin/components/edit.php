@@ -6,7 +6,7 @@
 
         $db = new DBManager('college_system');
 
-        $query = "SELECT `name`, `email`, `password`, `role` FROM $entity WHERE id=$id;";
+        $query = "SELECT `name` FROM $entity WHERE id=$id;";
 
         $data = $db->select($query);
 

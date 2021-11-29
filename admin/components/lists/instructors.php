@@ -8,7 +8,7 @@
         <th>Phone</th>
         <th>Gender</th>
         <th>Courses</th>
-        <?php if($_SESSION['role'] == 'admins'): ?>
+        <?php if($_SESSION['role'] == 'admins' || $_SESSION['role'] == 'instructors'): ?>
             <th>Delete</th>
             <th>Edit</th>
         <?php endif; ?>
@@ -45,9 +45,14 @@
             </ol>
         </td>
 
-        <?php if($_SESSION['role'] == 'admins'): ?>
+        <?php if($_SESSION['role'] == 'admins' || ($_SESSION['role'] == 'instructors' && $id == $_SESSION['id'])): ?>
             <td class="wow fadeInRight"><a href="/Project/admin/operations/delete.php?login=true&entity=instructors&id=<?php echo $id ?>" class="btn btn-danger pt-0 pb-0 pr-4 pl-4"><i class="fa fa-trash"></i></a></td>
-            <td class="wow fadeInRight"><a href="/Project/admin/operations/delete.php?login=true&entity=instructors&id=<?php echo $id ?>" class="btn btn-primary pt-0 pb-0 pr-4 pl-4"><i class="fa fa-edit"></i></a></td>
+            <td class="wow fadeInRight"><a href="/Project/admin/edit.php?login=true&entity=instructors&id=<?php echo $id ?>" class="btn btn-primary pt-0 pb-0 pr-4 pl-4"><i class="fa fa-edit"></i></a></td>
+
+        <?php elseif($_SESSION['role'] == 'instructors'): ?>
+            <td class="wow fadeInRight"><i class="fa fa-exclamation-triangle text-light bg-danger p-2 rounded" aria-hidden="true"></i></td>
+            <td class="wow fadeInRight"><i class="fa fa-exclamation-triangle text-light bg-danger p-2 rounded" aria-hidden="true"></i></td>
+            
         <?php endif; ?>
     </tr>
     <?php } ?>

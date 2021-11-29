@@ -26,18 +26,22 @@
 ?>
 
 
-<form method="POST" class="container mt-5 p-5 border border-dark rounded mb-5">
-    <div class="form-group">
-        <label for="username" class="text-secondary">Username</label>
-        <input type="text" class="form-control" id="username" placeholder="Enter username" name="name">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlInput1" class="text-secondary">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1" class="text-secondary">Your message</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" name="msg"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+<form method="POST" class="container mt-5 mb-5">
+    <fieldset class="border border-dark rounded p-3">
+        <legend class="w-auto p-3 wow fadeInDown"><h1>Contact us</h1></legend>
+        <div class="form-group wow fadeInUp">
+            <label for="username" class="text-secondary">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="name">
+        </div>
+        <div class="form-group wow fadeInUp">
+            <label for="exampleFormControlInput1" class="text-secondary">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+        </div>
+        <div class="form-group wow fadeInUp">
+            <label for="exampleFormControlTextarea1" class="text-secondary">Your message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" name="msg"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary wow fadeInUp">Submit</button>
+    </fieldset>
+    
 </form>

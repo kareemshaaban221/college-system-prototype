@@ -1,5 +1,8 @@
 <?php 
 
+    $query = "SELECT `name`, `email`, `password`, `role` FROM $entity WHERE id=$id;";
+    $data = $db->select($query);
+
     if(isset($_POST['name'])){
         $name = $_POST['name'];
         $email = $_POST['email'];
@@ -8,8 +11,6 @@
         $confirmPass = $_POST['confirmPass'];
         $role = $_POST['role'];
 
-        $db = new DBManager("college_system");
-
         $realPass = $data[0][2];
         $invalidPass = !($realPass == $oldPass);
         $invalidConfirm = !($newPass == $confirmPass);
@@ -17,7 +18,7 @@
             $query = "UPDATE admins SET name='$name', email='$email', password='$newPass', role=$role where id=$id;";
 
             if($name != '' && $email != '' && $newPass != '' && $role != ''){
-                if($db->insert($query)){
+                if($db->update($query)){
                     echo "<div class='alert alert-success'>Admin has been updated successfully.</div>";
                 }
                 else{
@@ -83,7 +84,6 @@
                 let role = <?php echo $data[0][3] ?>;
                 let ops = document.querySelectorAll('.selected');
                 ops.forEach((val)=>{
-                    console.log("val");
                     if(val.innerHTML == role){
                         val.setAttribute('selected', 'selected');
                     }
@@ -91,7 +91,7 @@
             </script>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="submit" class="btn btn-primary">Edit</button>
 </form>
 
 <?php else: ?>

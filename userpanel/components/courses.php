@@ -75,10 +75,9 @@
     </fieldset>
 </div>
 
-<?php } ?>
-
 <?php 
-    if($_GET['name'] == "\"Programming 2\""){
+    }
+    else if($_GET['name'] == "\"Programming 2\""){ 
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
@@ -118,10 +117,7 @@
 
 <?php 
     }
-?>
-
-<?php 
-    if($_GET['name'] == "\"Data Structures\""){
+    else if($_GET['name'] == "\"Data Structures\""){
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
@@ -162,10 +158,7 @@
 
 <?php 
     }
-?>
-
-<?php 
-    if($_GET['name'] == "\"Calculus\""){
+    else if($_GET['name'] == "\"Calculus\""){
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
@@ -206,10 +199,7 @@
 
 <?php 
     }
-?>
-
-<?php 
-    if($_GET['name'] == "\"Computer Graphics\""){
+    else if($_GET['name'] == "\"Computer Graphics\""){
 ?>
 
 <div class="container wow fadeInUp mt-5 pt-5 mb-4">
@@ -244,6 +234,20 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto consequuntur dolores dignissimos placeat praesentium, vitae sit. Minus accusamus eum quae? Error ipsa at quia vero? Blanditiis totam cupiditate molestias odit.</p>
     </fieldset>
 </div>
+
+<?php 
+    }
+    else{
+?>
+
+<div class="container wow pulse mt-5 pt-5 mb-4">
+    <h2 class="bg-danger p-3 text-light text-center">Course description is <span class="font-weight-bold text-dark">NOT</span> added yet!</h2>
+</div>
+<div class="text-center m-5 wow fadeInUp">
+    <span class="text-primary font-weight-bold">Need help? Contact admins from</span>
+    <a class="btn btn-primary p-1 ml-2" href="/Project/userpanel/contact.php?login=true">HERE</a>
+</div>
+
 
 <?php 
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2021 at 06:51 AM
+-- Generation Time: Nov 29, 2021 at 11:09 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -40,7 +40,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `role`) VALUES
-(1, 'kareem', 'admin@admin.com', '456', 3);
+(1, 'kareem', 'admin@admin.com', '123', 3);
 
 -- --------------------------------------------------------
 
@@ -55,6 +55,19 @@ CREATE TABLE `courses` (
   `price` float NOT NULL,
   `instructor_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`id`, `name`, `grade`, `price`, `instructor_id`) VALUES
+(8, 'Programming 1', '1', 99.9, 4),
+(9, 'Computer Vision', '3', 149.99, 4),
+(10, 'Programming 2', '1', 150, 5),
+(11, 'Operating Systems', '2', 100, 4),
+(12, 'Computer Graphics', '2', 99.9, 5),
+(13, 'Data Structures', '4', 125.75, 4),
+(14, 'Network', '3', 99.9, 5);
 
 -- --------------------------------------------------------
 
@@ -76,7 +89,8 @@ CREATE TABLE `instructors` (
 --
 
 INSERT INTO `instructors` (`id`, `name`, `email`, `password`, `gender`, `phone`) VALUES
-(4, 'Kimo Moh', 'krkr.egj5@gmail.com', '123', 'male', '01063620757');
+(4, 'Kimo Moh', 'krkr.egj5@gmail.com', '123', 'male', '01063620757'),
+(5, 'Rana Zaki', 'rana@ins.com', '123', 'female', '01020657573');
 
 -- --------------------------------------------------------
 
@@ -91,6 +105,14 @@ CREATE TABLE `instructor_family` (
   `instructor_id` int(11) NOT NULL,
   `type_of_rel` enum('wife','son','daughter','mother','father','sister','brother') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `instructor_family`
+--
+
+INSERT INTO `instructor_family` (`id`, `name`, `gender`, `instructor_id`, `type_of_rel`) VALUES
+(1, 'Aliaa', 'female', 4, 'wife'),
+(2, 'ahmed', 'male', 4, 'father');
 
 -- --------------------------------------------------------
 
@@ -108,6 +130,13 @@ CREATE TABLE `students` (
   `grade` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`id`, `name`, `email`, `password`, `gender`, `phone`, `grade`) VALUES
+(3, 'karem', 'karem@std.edu', '123', 'male', '01063620757', '2');
+
 -- --------------------------------------------------------
 
 --
@@ -120,6 +149,13 @@ CREATE TABLE `users` (
   `email` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
+(2, 'Kimo Moh', 'krkr.egj5@gmail.com', '123');
 
 -- --------------------------------------------------------
 
@@ -196,37 +232,37 @@ ALTER TABLE `user_message`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `instructors`
 --
 ALTER TABLE `instructors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `instructor_family`
 --
 ALTER TABLE `instructor_family`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user_message`

@@ -9,7 +9,7 @@
 
         $db = new DBManager("college_system");
 
-        $query = "DELETE FROM `$entity` where id id=$id;";
+        $query = "DELETE FROM `$entity` where id=$id;";
 
         if($db->delete($query)){
             header("location: /Project/admin/list.php?login=true&entity=$entity");
