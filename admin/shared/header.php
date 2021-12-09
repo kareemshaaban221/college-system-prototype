@@ -37,7 +37,7 @@
                         </div>
                     </li>
                 <?php }}
-                    // if($_SESSION['role'] == "instructors"){
+                    if($_SESSION['role'] == "instructors"){
                 ?>
 
                     <li class="nav-item dropdown" >
@@ -51,7 +51,7 @@
                     </li>
 
                 <?php
-                    // }
+                    }
                 
                 ?>
             <?php } ?>

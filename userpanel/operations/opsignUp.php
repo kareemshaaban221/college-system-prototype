@@ -8,9 +8,12 @@
         $query = "INSERT INTO users(`name`, `email`, `password`) VALUES('{$data["name"]}', '{$data["email"]}', '{$data["pass"]}');";
 
         $db = new DBManager('college_system');
-        $db->insert($query);
-
-        header("Location:/Project/userpanel/signin.php");
+        if($db->insert($query)){
+            header("Location:/Project/userpanel/signin.php");
+        }
+        else{
+            header("Location:/Project/userpanel/signup.php?invalid");
+        }
     }
 
 ?>

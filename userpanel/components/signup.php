@@ -3,6 +3,11 @@
         <legend class="w-auto p-3 wow fadeInRight">
             <h1 class="font-weight-bolder">Sign Up</h1>
         </legend>
+        <?php if(isset($_GET['invalid'])): ?>
+            <div class="alert alert-danger">
+                Repeated Sign Up Data, Try again later!
+            </div>
+        <?php endif; ?>
         <div class="form-group">
             <label for="exampleInputName1" class="font-weight-bold text-secondary">Full name</label>
             <input type="text" name="name" class="form-control bg-transparent" id="exampleInputName1" aria-describedby="nameHelp">
