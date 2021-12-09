@@ -49,13 +49,14 @@
                 $_SESSION['id'] = $data[0][0];
                 $_SESSION['pass'] = $pass;
                 // echo var_dump($_SESSION);
-                header("location:/Project/admin/index.php?login=true");
+                $_SESSION['adminLogin'] = true;
+                header("location:/Project/admin/");
             }
         }
     }
     else if($_GET['login'] === "false"){
+        $_SESSION['adminLogin'] = false;
         session_unset();
-        session_destroy();
         header("location:/Project/admin/index.php?login=false");
     }
 

@@ -1,5 +1,5 @@
 let page = window.location.href.split('/')[window.location.href.split('/').length - 1];
-let item = document.querySelectorAll('.nav-item')
+let item = document.querySelectorAll('.nav-item');
 
 removeAllActive(item);
 if(page == "news.php"){

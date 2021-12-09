@@ -27,8 +27,8 @@
         <?php } ?>
 
         <?php if($_SESSION['role'] == 'admins'): ?>
-        <td class="wow fadeInRight"><a href="/Project/admin/operations/delete.php?login=true&entity=users&id=<?php echo $id ?>" class="btn btn-danger pt-0 pb-0 pr-4 pl-4"><i class="fa fa-trash"></i></a></td>
-        <td class="wow fadeInRight"><a href="/Project/admin/edit.php?login=true&entity=users&id=<?php echo $id ?>" class="btn btn-primary pt-0 pb-0 pr-4 pl-4"><i class="fa fa-edit"></i></a></td>
+        <td class="wow fadeInRight"><a href="/Project/admin/operations/delete.php?entity=users&id=<?php echo $id ?>" class="btn btn-danger pt-0 pb-0 pr-4 pl-4"><i class="fa fa-trash"></i></a></td>
+        <td class="wow fadeInRight"><a href="/Project/admin/edit.php?entity=users&id=<?php echo $id ?>" class="btn btn-primary pt-0 pb-0 pr-4 pl-4"><i class="fa fa-edit"></i></a></td>
         <?php endif;?>
     </tr>
     <?php } ?>
@@ -38,7 +38,7 @@
 
 <div class="text-center">
     <h4 class="font-weight-bolder text-light bg-danger p-sm-3 p-1 rounded wow pulse">Not Authorized</h4>
-    <a class="btn btn-primary wow fadeInUp" href="/Project/admin/index.php?login=true">Back Home</a>
+    <a class="btn btn-primary wow fadeInUp" href="/Project/admin/">Back Home</a>
 </div>
 
 <?php endif; ?>

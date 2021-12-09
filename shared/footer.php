@@ -55,7 +55,7 @@
 
     </footer>
     
-    <script src="/Project/assets/js/jquery.min.js"></script>
+    <script src="/Project/assets/js/jquery-min.js"></script>
     <script src="/Project/assets/js/popper.min.js"></script>
     <script src="/Project/assets/js/bootstrap.min.js"></script>
     <script src="/Project/assets/js/wow.min.js"></script>

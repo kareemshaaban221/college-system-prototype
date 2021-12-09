@@ -1,10 +1,11 @@
 <link rel="stylesheet" href="/Project/admin/css/home.css">
 
 <?php
-    if(isset($_SESSION['admin'])):
+    if(isset($_SESSION['adminLogin']) && $_SESSION['adminLogin']):
 ?>
 
-<div class="home bg-transparent mb-5">
+<div class="bg-transparent mb-5 pt-5">
+    <div class="pt-5"></div>
     <h1 class="text-dark text-center wow fadeInDown">Welcome, <span class="bg-info text-light rounded p-1"><?php echo $_SESSION['admin']; ?></span></h1>
     <fieldset class="mx-auto w-75 border p-4 border-dark rounded wow fadeInUp">
         <legend class="w-auto p-2"><h2 class="d-inline">Quick Access</h2></legend>

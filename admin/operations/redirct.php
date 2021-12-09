@@ -6,7 +6,7 @@
         $op = $_POST['op'];
         $entity = $_POST['entity'];
 
-        header("location: /Project/admin/$op.php?login=true&entity=$entity");
+        header("location: /Project/admin/$op.php?entity=$entity");
     }
 
 

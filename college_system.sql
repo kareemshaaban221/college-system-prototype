@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2021 at 11:09 PM
+-- Generation Time: Dec 09, 2021 at 05:08 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -40,7 +40,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `role`) VALUES
-(1, 'kareem', 'admin@admin.com', '123', 3);
+(1, 'kareem', 'admin@admin.com', '123', 3),
+(4, 'Kimo Moh', 'krkr.egj5@gmail.com', '123', 0);
 
 -- --------------------------------------------------------
 
@@ -155,7 +156,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(2, 'Kimo Moh', 'krkr.egj5@gmail.com', '123');
+(2, 'Kimo Moh', 'krkr.egj5@gmail.com', '123'),
+(3, 'ahmed', 'ahmed@user.com', '123');
 
 -- --------------------------------------------------------
 
@@ -232,7 +234,7 @@ ALTER TABLE `user_message`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `courses`
@@ -262,7 +264,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_message`

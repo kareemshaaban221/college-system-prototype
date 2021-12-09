@@ -1,14 +1,16 @@
 <link rel="stylesheet" href="/Project/userpanel/css/home.css">
 
 <?php
-    if(isset($_SESSION['user'])):
+    if(isset($_SESSION['login']) && $_SESSION['login']):
 ?>
 
-<div class="home bg-transparent mb-5">
+<div class="pt-5"></div>
+<div class="pt-5"></div>
+<div class="bg-transparent mb-5 overflow-auto">
     <h1 class="text-dark text-center wow fadeInDown">Welcome, <span class="bg-info text-light rounded p-1"><?php echo $_SESSION['user']; ?></span></h1>
 
     <h4 class="text-info text-center mt-3 mb-4 wow fadeInUp">Those are list of courses which are available in our community:</h4>
-    <table class="table table-dark m-auto col-lg-10 col">
+    <table class="table table-dark m-auto col-lg-10 col mb-5">
         <tr>
             <th>Course ID</th>
             <th>Course Name</th>

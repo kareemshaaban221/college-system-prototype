@@ -10,7 +10,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus est consectetur blanditiis saepe quaerat labore, totam numquam sit veritatis dolorum reprehenderit obcaecati iure? Exercitationem delectus cupiditate facilis numquam laborum?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus est consectetur blanditiis saepe quaerat labore, totam numquam sit veritatis dolorum reprehenderit obcaecati iure? Exercitationem delectus cupiditate facilis numquam laborum?
     </p>
-    <a class="btn btn-info rounded-pill col-sm-6 col-12 m-3 wow pulse" href="/Project/userpanel/signup.php">Want to contact us ? Sign Up <span class="font-weight-bold">NOW</span></a>
+    <a class="btn btn-info rounded-pill col-sm-6 col-12 mt-3 mb-3 wow pulse" href="/Project/userpanel/signup.php">Want to contact us ? Sign Up <span class="font-weight-bold">NOW</span></a>
 </div>
 
 

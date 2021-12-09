@@ -19,13 +19,14 @@
                 // echo var_dump($data);
                 $_SESSION['user'] = $data[0][1];
                 // echo var_dump($_SESSION);
-                header("location:/Project/userpanel/index.php?login=true");
+                $_SESSION['login'] = true;
+                header("location:/Project/userpanel/");
             }
         }
     }
     else if($_GET['login'] === "false"){
+        $_SESSION['login'] = false;
         session_unset();
-        session_destroy();
         header("location:/Project/userpanel/index.php?login=false");
     }
 

@@ -29,8 +29,8 @@
         <?php } ?>
         
         <?php if($_SESSION['role'] == 'admins' || ($_SESSION['role'] == 'instructors' && $insId == $_SESSION['id'])): ?>
-            <td class="wow fadeInRight"><a href="/Project/admin/operations/delete.php?login=true&entity=courses&id=<?php echo $id ?>" class="btn btn-danger pt-0 pb-0 pr-4 pl-4"><i class="fa fa-trash"></i></a></td>
-            <td class="wow fadeInRight"><a href="/Project/admin/edit.php?login=true&entity=courses&id=<?php echo $id ?>" class="btn btn-primary pt-0 pb-0 pr-4 pl-4"><i class="fa fa-edit"></i></a></td>
+            <td class="wow fadeInRight"><a href="/Project/admin/operations/delete.php?entity=courses&id=<?php echo $id ?>" class="btn btn-danger pt-0 pb-0 pr-4 pl-4"><i class="fa fa-trash"></i></a></td>
+            <td class="wow fadeInRight"><a href="/Project/admin/edit.php?entity=courses&id=<?php echo $id ?>" class="btn btn-primary pt-0 pb-0 pr-4 pl-4"><i class="fa fa-edit"></i></a></td>
 
         <?php elseif($_SESSION['role'] == 'instructors'): ?>
             <td class="wow fadeInRight"><i class="fa fa-exclamation-triangle text-light bg-danger p-2 rounded" aria-hidden="true"></i></td>

@@ -28,7 +28,7 @@
 
 <?php if($_SESSION['role'] == "admins"): ?>
 
-<form method="POST" action="http://localhost/Project/admin/add.php?login=true&entity=instructors" class="wow fadeInUp">
+<form method="POST" action="http://localhost/Project/admin/add.php?entity=instructors" class="wow fadeInUp">
     <div class="form-group">
         <label for="exampleInputName">Name</label>
         <input type="text" class="form-control bg-transparent" id="exampleInputName" aria-describedby="emailHelp" name="name">
@@ -61,7 +61,7 @@
 
 <div class="text-center">
 <h4 class="font-weight-bolder text-light bg-danger p-sm-3 p-1 rounded wow pulse">Not Authorized</h4>
-    <a class="btn btn-primary wow fadeInUp" href="/Project/admin/index.php?login=true">Back Home</a>
+    <a class="btn btn-primary wow fadeInUp" href="/Project/admin/">Back Home</a>
 </div>
 
 

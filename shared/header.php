@@ -21,7 +21,7 @@
 <body class="bg-light">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-secondary">
-        <a class="navbar-brand" href="/Project">MU-FCIS</a>
+        <a class="navbar-brand" href="/Project"><i class="fa fa-university text-warning"></i> MU-F<span class="text-warning">CIS</span></a>
         <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
