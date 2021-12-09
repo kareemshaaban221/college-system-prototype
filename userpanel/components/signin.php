@@ -17,5 +17,6 @@
             <input type="password" name="pass" class="form-control bg-transparent" id="exampleInputPassword1">
         </div>
         <button type="submit" class="btn btn-primary font-weight-bold">Login</button>
+        <a href="/Project/userpanel/signup.php" class="ml-3">Don't have account?</a>
     </fieldset>
 </form>
