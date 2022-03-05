@@ -20,19 +20,34 @@
             if($name != '' && $email != '' && $newPass != '' && $role != ''){
                 if($db->update($query)){
                     echo "<div class='alert alert-success'>Admin has been updated successfully.</div>";
+                    // header("location: /Project/admin/edit.php?entity=admins&id=$id&success");
                 }
                 else{
                     echo "<div class='alert alert-danger'>Updating is invalid.</div>";
+                    // header("location: /Project/admin/edit.php?entity=admins&id=$id&notSuccess");
                 }
             }
             else{
                 echo "<div class='alert alert-danger'>Updating is invalid. There are null values!</div>";
+                // header("location: /Project/admin/edit.php?entity=admins&id=$id&invalidInput");
             }
         }
-
     }
 
 ?>
+
+<!-- update messages if they exist -->
+<?php 
+// if( isset($_GET['success']) ):?>
+    <!-- <div class='alert alert-success'>Admin has been updated successfully.</div> -->
+<?php
+// elseif( isset($_GET['notSuccess']) ):?>
+    <!-- <div class='alert alert-danger'>Updating is invalid.</div> -->
+<?php 
+// elseif( isset($_GET['invalidInput']) ):?>
+    <!-- <div class='alert alert-danger'>Updating is invalid. There are null values!</div> -->
+<?php 
+// endif;?>
 
 <?php if($_SESSION['role'] == "admins"): ?>
 

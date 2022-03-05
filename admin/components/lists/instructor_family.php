@@ -14,7 +14,7 @@
     <?php 
     
         $db = new DBManager("college_system");
-        $query = "SELECT a.id,a.name,a.gender, b.name,a.type_of_rel FROM instructor_family AS a JOIN instructors AS b ON b.id=a.instructor_id;";
+        $query = "SELECT a.id,a.name,a.gender, b.name,a.type_of_rel FROM instructor_family AS a JOIN instructors AS b ON b.id=a.instructor_id WHERE a.instructor_id={$_SESSION['id']};";
 
         $data = $db->select($query);
 

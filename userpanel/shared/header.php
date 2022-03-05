@@ -1,6 +1,8 @@
     <?php
         include_once "../services/DBConnection.php";
 
+        $db = new DBManager("college_system");
+
         session_start();
         if(isset($_GET['login']) && $_GET['login'] == 'false'){
             $_SESSION['login'] = false;
@@ -20,7 +22,6 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php
-                    $db = new DBManager("college_system");
                     $query = "SELECT name FROM courses;";
                     $data = $db->select($query);
                     foreach ($data as $row) {

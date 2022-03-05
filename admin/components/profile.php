@@ -3,6 +3,10 @@
     $entity = $_SESSION['role'];
     $id = $_SESSION['id'];
 
+    if(!$entity){
+        $entity = 'admins';
+    }
+
     if(isset($_POST['colData'])){
         $updated = false;
 
@@ -16,6 +20,27 @@
     
             if($db->update($query)){
                 $updated = true;
+                if($_POST['field'] == 'name'){
+                    $_SESSION['admin'] = $_POST['colData'];
+                }
+                else if($_POST['field'] == 'password'){
+                    $_SESSION['pass'] = $_POST['colData'];
+                }
+                else if($_POST['field'] == 'role'){
+                    if($_POST['colData'] == 1){
+                        $_SESSION['role'] = 'students';
+                    }
+                    elseif($_POST['colData'] == 2){
+                        $_SESSION['role'] = 'instuctors';
+                    }
+                    if($_POST['colData'] == 0){
+                        $_SESSION['role'] = '';
+                        $entity = 'admins';
+                    }
+                    if($_POST['colData'] == 3){
+                        $_SESSION['role'] = 'admins';
+                    }
+                }
             }
             else{
                 $updated = false;
@@ -26,6 +51,7 @@
     $query = "SELECT * FROM $entity WHERE id=$id";
 
     $data = $db->select($query, true)[0];
+    array_shift($data);
 
 ?>
 

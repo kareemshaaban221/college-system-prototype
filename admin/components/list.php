@@ -1,5 +1,5 @@
 <div class="padtop-100">
-    <div class="ml-sm-5 mr-sm-5 pr-sm-5 pl-sm-5 mb-5 overflow-auto">
+    <div class="ml-sm-5 mr-sm-5 pr-sm-5 pl-sm-5 mb-5 overflow-auto pt-3">
         <h2 class="mb-4 text-center wow fadeInDown">List of <span class="bg-info p-1 text-light rounded text-capitalize"><?php echo $_GET['entity'] ?></span></h2>
         <?php 
         

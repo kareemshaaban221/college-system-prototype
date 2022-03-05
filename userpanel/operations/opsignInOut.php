@@ -20,6 +20,12 @@
                 $_SESSION['user'] = $data[0][1];
                 // echo var_dump($_SESSION);
                 $_SESSION['login'] = true;
+                if(isset($_SESSION['adminLogin'])){
+                    $_SESSION['adminLogin'] = false;
+                }
+                $_SESSION['role'] = "users";
+                $_SESSION['id'] = $data[0][0];
+                $_SESSION['pass'] = $pass;
                 header("location:/Project/userpanel/");
             }
         }

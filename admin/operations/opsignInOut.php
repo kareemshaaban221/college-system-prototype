@@ -2,9 +2,8 @@
 
     include_once "../../services/DBConnection.php";
 
-    function validate($temp, $email, $pass){
+    function validate($temp, $email, $pass, $db){
         $query = "SELECT * FROM ".$temp." WHERE email='$email' AND password='$pass';";
-        $db = new DBManager('college_system');
         return $db->select($query);
     }
 
@@ -16,14 +15,15 @@
             $pass = $_POST['pass'];
 
             $entity = "admins";
-    
-            $data = validate($entity, $email, $pass);
+            
+            $db = new DBManager('college_system');
+            $data = validate($entity, $email, $pass, $db);
             if(!$data){
                 $entity = "instructors";
-                $data = validate($entity, $email, $pass);
+                $data = validate($entity, $email, $pass, $db);
                 if(!$data){
                     $entity = "students";
-                    $data = validate($entity, $email, $pass);
+                    $data = validate($entity, $email, $pass, $db);
 
                     if(!$data){
                         header("location:/Project/admin/signin.php?invalid=true");
@@ -50,6 +50,9 @@
                 $_SESSION['pass'] = $pass;
                 // echo var_dump($_SESSION);
                 $_SESSION['adminLogin'] = true;
+                if(isset($_SESSION['login'])){
+                    $_SESSION['login'] = false;
+                }
                 header("location:/Project/admin/");
             }
         }

@@ -71,6 +71,8 @@
         <?php } ?>
     </div>
     </nav>
+    
+    <!-- Bubbles in the background -->
 
     <div class="obj obj1 bg-info"></div>
 

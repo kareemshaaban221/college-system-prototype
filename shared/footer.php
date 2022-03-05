@@ -54,6 +54,48 @@
         </div>
 
     </footer>
+
+    <div id="upBtn" class="btn p-2 text-light btn-primary">
+      <i class="fa fa-arrow-up fa-lg" aria-hidden="true"></i>
+    </div>
+
+    <?php if (isset($_SESSION['login']) && $_SESSION['login']) { ?>
+        <a id="bell" class="btn p-2 text-light btn-danger" href="/Project/userpanel/contact.php">
+            <div class="d-inline" style="position: relative;">
+                <?php
+                    $query = "SELECT COUNT(id) AS noMsgs FROM user_message WHERE answer IS NOT NULL;";
+                    $noMsgs = $db->select($query, true)[0]['noMsgs'];
+                    if($noMsgs):
+                ?>
+                    <div class="bg-warning text-dark rounded-circle p-1 w-auto display-6 font-weight-bold" style="position: absolute; right: 0; top: -10px; line-height: 0.5;"><?php echo $noMsgs?></div>
+                <?php endif;?>
+                <i class="fa fa-bell fa-lg text-light" aria-hidden="true"></i>
+            </div>
+            <?php if($noMsgs){ echo "&nbsp;"; }?>
+            <div class="d-inline">
+                <span id="bellMsg" class="ml-1 text-light">|&nbsp;Messages</span>
+            </div>
+        </a>
+    <?php } ?>
+
+    <?php if (isset($_SESSION['adminLogin']) && $_SESSION['adminLogin'] &&  $_SESSION['role'] == 'admins') { ?>
+        <a id="bell" class="btn p-2 text-light btn-danger" href="/Project/admin/contact.php">
+            <div class="d-inline" style="position: relative;">
+                <?php
+                    $query = "SELECT COUNT(id) AS noMsgs FROM user_message WHERE answer IS NULL;";
+                    $noMsgs = $db->select($query, true)[0]['noMsgs'];
+                    if($noMsgs):
+                ?>
+                    <div class="bg-warning text-dark rounded-circle p-1 w-auto display-6 font-weight-bold" style="position: absolute; right: 0; top: -10px; line-height: 0.5;"><?php echo $noMsgs?></div>
+                <?php endif;?>
+                <i class="fa fa-bell fa-lg text-light" aria-hidden="true"></i>
+            </div>
+            <?php if($noMsgs){ echo "&nbsp;"; }?>
+            <div class="d-inline">
+                <span id="bellMsg" class="ml-1 text-light">|&nbsp;Messages</span>
+            </div>
+        </a>
+    <?php } ?>
     
     <script src="/Project/assets/js/jquery-min.js"></script>
     <script src="/Project/assets/js/popper.min.js"></script>
